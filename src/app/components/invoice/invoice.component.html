@@ -1,19 +1,36 @@
-<div>
-    <div>
-        <h2>FACTURA</h2>
-        <div>
-             <ul>
-                <li>No. {{invoice.id}}</li>
-             </ul>
-            
+<div class="container py-4">
+    <div class="bg-light rounded shadow-sm p-4">
+        <h2 class="text-center text-primary mb-4">Factura</h2>
+        <div class="mb-3 text-center">
+            <span class="fw-bold">No. <span class="text-primary">{{invoice.id}}</span></span>
         </div>
-        <div>
-            <company-view [company]="invoice.company"></company-view>
-        </div>    
-        <div>
-            <customer-view [customer]="invoice.customer"></customer-view>
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="border rounded p-3 bg-info bg-opacity-10">
+                    <company-view [company]="invoice.company"></company-view>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border rounded p-3 bg-success bg-opacity-10">
+                    <customer-view [customer]="invoice.customer"></customer-view>
+                </div>
+            </div>
         </div>
-        <div>
-           <invoice-detail [items]="invoice.items"></invoice-detail>
+        <div class="border rounded p-3 bg-secondary bg-opacity-10">
+            <h5 class="mb-3 text-secondary">Detalle de productos</h5>
+            <invoice-detail [items]="invoice.items"></invoice-detail>
         </div>
+    </div>
 </div>
+<style>
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .fw-bold {
+        font-weight: 700;
+    }
+    .list-group-item {
+        font-size: 1.1rem;
+    }
+</style>
