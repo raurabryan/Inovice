@@ -1,0 +1,12 @@
+<table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <tr invoice-item *ngFor="let item of items" [item]="item"></tr>
+</tbody>
+</table>

@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h2>FACTURA</h2>
+        <div>
+             <ul>
+                <li>No. {{invoice.id}}</li>
+             </ul>
+            
+        </div>
+        <div>
+            <company-view [company]="invoice.company"></company-view>
+        </div>    
+        <div>
+            <customer-view [customer]="invoice.customer"></customer-view>
+        </div>
+        <div>
+           <invoice-detail [items]="invoice.items"></invoice-detail>
+        </div>
+</div>
