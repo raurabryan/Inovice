@@ -16,7 +16,7 @@ export const invoice: Invoice = {
         id: '1724865671',
         name: 'Bryan',
         surname: 'Raura',
-        adrress: {
+        address: {
         city: 'Los Angeles',
         principalStreet: '456 Elm Street',
         secondaryStreet: 'Canelo',

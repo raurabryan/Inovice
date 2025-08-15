@@ -4,6 +4,6 @@ export class Customer{
     id!: string;
     name!: string;
     surname!: string;
-    adrress!: Address;
+    address!: Address;
     
 }
